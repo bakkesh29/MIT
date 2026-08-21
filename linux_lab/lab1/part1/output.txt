@@ -1,0 +1,8 @@
+total 16
+-rw-rw-r-- 1 mahe mahe 19 Aug 21 17:20 file1.txt
+-rw-rw-r-- 1 mahe mahe 20 Aug 21 17:27 fruits.txt
+-rw-rw-r-- 1 mahe mahe  0 Aug 21 17:25 newfile.txt
+-rw-rw-r-- 1 mahe mahe  0 Aug 21 17:32 output.txt
+-rw-rw-r-- 1 mahe mahe 19 Aug 21 17:21 renamed_file.txt
+-rw-rw-r-- 1 mahe mahe 34 Aug 21 17:25 sample.txt
+-rwxrwxr-x 1 mahe mahe  0 Aug 21 17:22 script.sh

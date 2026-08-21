@@ -1,0 +1,50 @@
+
+touch unwanted.txt
+rm unwanted.txt
+
+mkdir directory1
+
+mkdir empty_directory
+rmdir empty_directory
+
+touch script.sh
+chmod +x script.sh
+ls -l script.sh
+
+chmod 755 script.sh
+
+date
+date "+%d-%m-%Y %H:%M:%S"
+
+clear
+
+echo -e "Linux is useful.\nLinux is powerful." > sample.txt
+wc sample.txt
+wc -l sample.txt
+wc -w sample.txt
+wc -c sample.txt
+
+touch newfile.txt
+
+grep "Linux" sample.txt
+grep -i "linux" sample.txt
+grep -in "linux" sample.txt
+
+echo -e "Orange\nApple\nBanana" > fruits.txt
+sort fruits.txt
+sort fruits.txt > sorted_fruits.txt
+sort -r fruits.txt
+
+ps
+ps -f
+ps aux
+ps aux | grep bash
+
+sleep 5
+sleep 100 &
+
+sleep 1000 &
+PID=$!
+ps -p "$PID"
+kill "$PID"
+
