@@ -1,0 +1,11 @@
+Copied source.txt to dest.txt character by character (139 characters)
+
+----- source.txt -----
+This file is copied character by character.
+Each byte is read with getc() and written with putc().
+Both functions are declared in stdio.h.
+
+----- dest.txt -----
+This file is copied character by character.
+Each byte is read with getc() and written with putc().
+Both functions are declared in stdio.h.

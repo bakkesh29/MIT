@@ -1,0 +1,4 @@
+Lines in data.txt containing "manipal":
+I study at manipal every weekday.
+Our college is in manipal.
+Students from manipal university attend this lab.

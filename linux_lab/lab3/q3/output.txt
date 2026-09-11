@@ -1,0 +1,29 @@
+Integer conversion specifiers
+  %d  (decimal)           : 255
+  %i  (integer)           : 255
+  %o  (octal)             : 377
+  %x  (hex lowercase)     : ff
+  %X  (hex uppercase)     : FF
+  %u  (unsigned)          : 4000000000
+
+Floating-point conversion specifiers
+  %f  (decimal float)     : 123.456000
+  %e  (scientific)        : 1.234560e+02
+  %E  (scientific upper)  : 1.234560E+02
+  %g  (shortest of f/e)   : 123.456
+  %G  (shortest upper)    : 123.456
+
+Character and string conversion specifiers
+  %c  (character)         : A
+  %s  (string)            : Manipal
+
+Pointer conversion specifier
+  %p  (address)           : 0x16d68d980
+
+Width, precision and flags
+  %10d  (width 10)        : [       255]
+  %-10d (left justify)    : [255       ]
+  %08d  (zero padded)     : [00000255]
+  %+d   (show sign)       : [+255]
+  %.2f  (2 decimal places): 123.46
+  %10.2f (width+precision): [    123.46]

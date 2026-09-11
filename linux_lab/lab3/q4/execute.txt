@@ -1,0 +1,19 @@
+# Commands to create files, compile and execute Q4
+
+cd q4
+
+cat > source.txt << 'EOF'
+This file is copied character by character.
+Each byte is read with getc() and written with putc().
+Both functions are declared in stdio.h.
+EOF
+
+gcc sample.c -o sample
+./sample source.txt dest.txt
+
+echo
+echo "----- source.txt -----"
+cat source.txt
+echo
+echo "----- dest.txt -----"
+cat dest.txt

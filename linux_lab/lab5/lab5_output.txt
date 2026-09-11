@@ -1,0 +1,264 @@
+Script started on 2026-09-11 15:03:43+05:30 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="112" LINES="27"]
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ ./soflinktlinkftlinkgcc softlink.c -o soflink[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kc wait [K_demo.c -o wait_demo
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ ./wait_demo
+[?2004lParent Process: My PID is 6652
+Parent Process: Waiting for child (PID: 6653) to finish...
+Child Process: My PID is 6653
+Child Process: Simulating some work for 2 seconds...
+Child Process: Work completed. Exiting.
+Parent Process: Child has completed. Parent is now exiting.
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ nano exec_demo.c
+[?2004l[?2004h[?1049h[22;0;0t[1;27r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[25;51H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 7.2                                       exec_demo.c                                                [1;111H(B[m[26d(B[0;7m^G(B[m Help[26;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[26;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[27d(B[0;7m^X(B[m Exit[27;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[27;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d[?12l[?25h[?25l[1;66H(B[0;7m*[25d(B[m[K[1;111H[2;5H(B[0;1m[33melse[39m(B[m {[3d(B[0;1m[34m// This is the parent process.[4;9H[39m(B[mprintf((B[0;1m[33m"Parent Process: Waiting for the exec'd child to finish...\n"[39m(B[m);[5;8H[42m[1K[6;9H(B[0;1m[34m// Wait for the child to finish executing the new binary[7;9H[39m(B[mwait((B[0;1m[31mNULL[39m(B[m);[8;8H[42m[1K[9;9H[49m(B[mprintf((B[0;1m[33m"\nParent Process: The exec'd child has finished. Exiting.\n"[39m(B[m);[10;5H}[12d[35mreturn[39m(B[m 0;[13d}[?12l[?25h[?25l[25d(B[0;7mSave modified buffer?                                                                                           [26;1H Y(B[m Yes[K[27d(B[0;7m N(B[m No  [27;18H(B[0;7mC(B[m Cancel[K[25;23H[?12l[?25h[?25l[26d(B[0;7m^G(B[m Help[26;29H(B[0;7mM-D(B[m DOS Format[26;57H(B[0;7mM-A(B[m Append[26;85H(B[0;7mM-B(B[m Backup File[27d(B[0;7m^C(B[m Cancel[17G            (B[0;7mM-M(B[m Mac Format[27;57H(B[0;7mM-P(B[m Prepend[27;85H(B[0;7m^T(B[m Browse[25d(B[0;7mFile Name to Write: exec_demo.c(B[m[?12l[?25h[?25l[25;49H[1K (B[0;7m[ Writing... ](B[m[K[1;66H(B[0;7m [111G(B[m[25;48H(B[0;7m[ Wrote 43 lines ](B[m[J[27d[?12l[?25h[27;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ nano exec_demo.c[5P./wait_demogcc wait_demo.c -o wait_demo[1P_demo[1P_demo[1P_demo[1P_demoe_demox_demoe_democ_demo[C[1P[1P[1P[1P[1@e[1@x[1@e[1@c
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ gcc exec_demo.c -o exec_demo[12Pnano exec_demo.c[5P./wait_demo[1P_demo[1P_demo[1P_demo[1P_demoe_demox_demoe_democ_demo
+[?2004lStarting exec_demo program...
+Parent Process: Waiting for the exec'd child to finish...
+Child Process: Loading the 'wait_demo' executable using execl()...
+
+Parent Process: My PID is 6749
+Parent Process: Waiting for child (PID: 6750) to finish...
+Child Process: My PID is 6750
+Child Process: Simulating some work for 2 seconds...
+Child Process: Work completed. Exiting.
+Parent Process: Child has completed. Parent is now exiting.
+
+Parent Process: The exec'd child has finished. Exiting.
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ nano pid_demo.c
+[?2004l[?2004h[?1049h[22;0;0t[1;27r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[25;51H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 7.2                                       pid_demo.c                                                 [1;111H(B[m[26d(B[0;7m^G(B[m Help[26;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[26;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[27d(B[0;7m^X(B[m Exit[27;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[27;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d[?12l[?25h[?25l[1;65H(B[0;7m*[25d(B[m[K[1;111H[2;9H(B[0;1m[34m// We use wait(NULL) just to let the child print first for cleaner output[3;9H[39m(B[mwait((B[0;1m[31mNULL[39m(B[m);[42m [4;8H[1K[5;9H[49m(B[mprintf((B[0;1m[33m"--- Inside Parent Process ---\n"[39m(B[m);[6;9Hprintf((B[0;1m[33m"My Process ID (PID)      : %d\n"[39m(B[m, getpid());[7;9Hprintf((B[0;1m[33m"My Parent's ID (PPID)    : %d (This is usually your terminal shell)\n"[39m(B[m, getppid());[8;9Hprintf((B[0;1m[33m"My Child's ID            : %d\n\n"[39m(B[m, pid);[9;5H}[11d[35mreturn[39m(B[m 0;[12d}[13d[?12l[?25h[?25l[25d(B[0;7mSave modified buffer?                                                                                           [26;1H Y(B[m Yes[K[27d(B[0;7m N(B[m No  [27;18H(B[0;7mC(B[m Cancel[K[25;23H[?12l[?25h[?25l[26d(B[0;7m^G(B[m Help[26;29H(B[0;7mM-D(B[m DOS Format[26;57H(B[0;7mM-A(B[m Append[26;85H(B[0;7mM-B(B[m Backup File[27d(B[0;7m^C(B[m Cancel[17G            (B[0;7mM-M(B[m Mac Format[27;57H(B[0;7mM-P(B[m Prepend[27;85H(B[0;7m^T(B[m Browse[25d(B[0;7mFile Name to Write: pid_demo.c(B[m[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[25;49H[1K (B[0;7m[ Writing... ](B[m[K[1;65H(B[0;7m [111G(B[m[25;48H(B[0;7m[ Wrote 37 lines ](B[m[J[27d[?12l[?25h[27;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ nano pid_demo.c[4P./exec_demogcc exec_demo.c -o exec_demo[C[1P_demo[1P_demo[1P_demo[1P_demop_demoi_demod_demo[C[1P[1P[1P[1P[1@p[1@i[1@d
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ ./pid_demo
+[?2004l--- Inside Child Process ---
+My Process ID (PID)      : 6786
+My Parent's ID (PPID)    : 6785
+My Child's ID            : None (fork() returned 0)
+
+--- Inside Parent Process ---
+My Process ID (PID)      : 6785
+My Parent's ID (PPID)    : 6442 (This is usually your terminal shell)
+My Child's ID            : 6786
+
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ nano zombie_demo.c
+[?2004l[?2004h[?1049h[22;0;0t[1;27r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[25;51H(B[0;7m[ New File ](B[m[H(B[0;7m  GNU nano 7.2                                      zombie_demo.c                                               [1;111H(B[m[26d(B[0;7m^G(B[m Help[26;17H(B[0;7m^O(B[m Write Out    (B[0;7m^W(B[m Where Is     (B[0;7m^K(B[m Cut[26;65H(B[0;7m^T(B[m Execute[81G(B[0;7m^C(B[m Location     (B[0;7mM-U(B[m Undo[27d(B[0;7m^X(B[m Exit[27;17H(B[0;7m^R(B[m Read File    (B[0;7m^\(B[m Replace[49G(B[0;7m^U(B[m Paste[27;65H(B[0;7m^J(B[m Justify[81G(B[0;7m^/(B[m Go To Line   (B[0;7mM-E(B[m Redo[2d[?12l[?25h[?25l[1;67H(B[0;7m*[25d(B[m[K[1;111H[2;9Hprintf((B[0;1m[33m"Parent Process (PID: %d) is sleeping for 15 seconds.\n"[39m(B[m, getpid());[3;9Hprintf((B[0;1m[33m"--> QUICK: Run the 'ps' command in your terminal NOW to see the <defunct> process!\n"[39m(B[m);[4;8H[42m[1K[5;9H[49m(B[msleep(15);[42m [6;8H[1K[7;9H[49m(B[mprintf((B[0;1m[33m"\nParent Process waking up and exiting. The init process will now clean up the zombie.\n"[39m(B[m);[8;5H}[10d[35mreturn[39m(B[m 0;[11d}[13d[?12l[?25h[?25l[25d(B[0;7mSave modified buffer?                                                                                           [26;1H Y(B[m Yes[K[27d(B[0;7m N(B[m No  [27;18H(B[0;7mC(B[m Cancel[K[25;23H[?12l[?25h[?25l[?12l[?25h[?25l[?12l[?25h[?25l[26d(B[0;7m^G(B[m Help[26;29H(B[0;7mM-D(B[m DOS Format[26;57H(B[0;7mM-A(B[m Append[26;85H(B[0;7mM-B(B[m Backup File[27d(B[0;7m^C(B[m Cancel[17G            (B[0;7mM-M(B[m Mac Format[27;57H(B[0;7mM-P(B[m Prepend[27;85H(B[0;7m^T(B[m Browse[25d(B[0;7mFile Name to Write: zombie_demo.c(B[m[?12l[?25h[?25l[25;49H[1K (B[0;7m[ Writing... ](B[m[K[1;67H(B[0;7m [111G(B[m[25;48H(B[0;7m[ Wrote 33 lines ](B[m[J[27d[?12l[?25h[27;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ nano zombie_demo.c[8P./pid_demogcc pid_demo.c -o pid_demo[1P_demo[1P_demo[1P_demox_demoo_demom_demob_demoi_demoe_demo[C[1Pombie_demozombie_demo[1P[1P[1P[1@z[1@o[1@m[1@b[1@i[1@e
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ gcc zombie_demo.c -o zombie_demo[14Pnano zombie_demo.c[8P./pid_demo[1P_demo[1P_demo[1P_demoz_demoo_demom_demob_demoi_demoe_demo
+[?2004lParent Process (PID: 6818) is sleeping for 15 seconds.
+--> QUICK: Run the 'ps' command in your terminal NOW to see the <defunct> process!
+Child Process (PID: 6819) is exiting immediately to become a zombie.
+
+Parent Process waking up and exiting. The init process will now clean up the zombie.
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+int main() {
+    pid_t pid;
+
+[7m    // Create a new child process[27m
+[7m    pid = fork();[27m
+
+[7m    if (pid < 0) {[27m
+[7m        perror("fork failed");[27m
+[7m        exit(1);[27m
+[7m    } [27m
+[7m    else if (pid == 0) {[27m
+[7m        printf("Child Process: My PID is %d\n", getpid());[27m
+[7m        printf("Child Process: Simulating some work for 2 seconds...\n");[27m
+[7m        sleep(2); [27m
+[7m        printf("Child Process: Work completed. Exiting.\n");[27m
+[7m        exit(0);[27m
+[7m    } [27m
+[7m    else {[27m
+[7m        printf("Parent Process: My PID is %d\n", getpid());[27m
+[7m        printf("Parent Process: Waiting for child (PID: %d) to finish...\n", pid);[27m
+[7m        [27m
+[7m        // Block the parent process until the child completes[27m[7m        wait(NULL);[27m[7m        [27m[7m        printf("Parent Process: Child has completed. Parent is now exiting.\n");[27m[7m    }[27m[7m    return 0;[27m[7m}[27m[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A    // Create a new child process
+    pid = fork();
+
+    if (pid < 0) {
+        perror("fork failed");
+        exit(1);
+    } 
+    else if (pid == 0) {
+        printf("Child Process: My PID is %d\n", getpid());
+        printf("Child Process: Simulating some work for 2 seconds...\n");
+        sleep(2); 
+        printf("Child Process: Work completed. Exiting.\n");
+        exit(0);
+    } 
+    else {
+        printf("Parent Process: My PID is %d\n", getpid());
+        printf("Parent Process: Waiting for child (PID: %d) to finish...\n", pid);
+        
+        // Block the parent process until the child completes        wait(NULL);                printf("Parent Process: Child has completed. Parent is now exiting.\n");    }    return 0;}#include <stdio.h>#include <stdlib.h>#include <unistd.h>#include <sys/types.h>#include <sys/wait.h>int main() {    pid_t pid;[7m    // Create a new child process[27m[7m    pid = fork();[27m[7m    if (pid < 0) {[27m[7m        perror("fork failed");[27m[7m        exit(1);[27m[7m    } [27m[7m    else if (pid == 0) {[27m[7m        printf("Child Process: My PID is %d\n", getpid());[27m[7m        printf("Child Process: Simulating some work for 2 seconds...\n");[27m[7m        sleep(2); [27m[7m        printf("Child Process: Work completed. Exiting.\n");[27m[7m        exit(0);[27m[7m    } [27m[7m    else {[27m[7m        printf("Parent Process: My PID is %d\n", getpid());[27m[7m        printf("Parent Process: Waiting for child (PID: %d) to finish...\n", pid);[27m[7m        [27m[7m        // Block the parent process until the child completes[27m[7m        wait(NULL);[27m[7m        [27m[7m        printf("Parent Process: Child has completed. Parent is now exiting.\n");[27m[7m    }[27m[7m    return 0;[27m[7m}[27m    // Create a new child process    pid = fork();    if (pid < 0) {        perror("fork failed");        exit(1);    }     else if (pid == 0) {        printf("Child Process: My PID is %d\n", getpid());        printf("Child Process: Simulating some work for 2 seconds...\n");        sleep(2);         printf("Child Process: Work completed. Exiting.\n");        exit(0);    }     else {        printf("Parent Process: My PID is %d\n", getpid());        printf("Parent Process: Waiting for child (PID: %d) to finish...\n", pid);                // Block the parent process until the child completes        wait(NULL);                printf("Parent Process: Child has completed. Parent is now exiting.\n");    }    return 0;}#include <stdio.h>#include <stdlib.h>#include <unistd.h>#include <sys/types.h>#include <sys/wait.h>int main() {    pid_t pid;[7m    // Create a new child process[27m[7m    pid = fork();[27m[7m    if (pid < 0) {[27m[7m        perror("fork failed");[27m[7m        exit(1);[27m[7m    } [27m[7m    else if (pid == 0) {[27m[7m        printf("Child Process: My PID is %d\n", getpid());[27m[7m        printf("Child Process: Simulating some work for 2 seconds...\n");[27m[7m        sleep(2); [27m[7m        printf("Child Process: Work completed. Exiting.\n");[27m[7m        exit(0);[27m[7m    } [27m[7m    else {[27m[7m        printf("Parent Process: My PID is %d\n", getpid());[27m[7m        printf("Parent Process: Waiting for child (PID: %d) to finish...\n", pid);[27m[7m        [27m[7m        // Block the parent process until the child completes[27m[7m        wait(NULL);[27m[7m        [27m[7m        printf("Parent Process: Child has completed. Parent is now exiting.\n");[27m[7m    }[27m[7m    return 0;[27m[7m}[27m    // Create a new child process    pid = fork();    if (pid < 0) {        perror("fork failed");        exit(1);    }     else if (pid == 0) {        printf("Child Process: My PID is %d\n", getpid());        printf("Child Process: Simulating some work for 2 seconds...\n");        sleep(2);         printf("Child Process: Work completed. Exiting.\n");        exit(0);    }     else {        printf("Parent Process: My PID is %d\n", getpid());        printf("Parent Process: Waiting for child (PID: %d) to finish...\n", pid);                // Block the parent process until the child completes        wait(NULL);                printf("Parent Process: Child has completed. Parent is now exiting.\n");    }    return 0;}[200~#include <stdio.h>
+[?2004lbash: syntax error near unexpected token `('
+pid_t: command not found
+bash: //: Is a directory
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `{'
+bash: syntax error near unexpected token `"fork failed"'
+bash: syntax error near unexpected token `1'
+bash: syntax error near unexpected token `}'
+bash: syntax error near unexpected token `else'
+bash: syntax error near unexpected token `"Child Process: My PID is %d\n",'
+bash: syntax error near unexpected token `"Child Process: Simulating some work for 2 seconds...\n"'
+bash: syntax error near unexpected token `2'
+bash: syntax error near unexpected token `"Child Process: Work completed. Exiting.\n"'
+bash: syntax error near unexpected token `0'
+bash: syntax error near unexpected token `}'
+bash: syntax error near unexpected token `else'
+bash: syntax error near unexpected token `"Parent Process: My PID is %d\n",'
+bash: syntax error near unexpected token `"Parent Process: Waiting for child (PID: %d) to finish...\n",'
+bash: //: Is a directory
+bash: syntax error near unexpected token `NULL'
+bash: syntax error near unexpected token `"Parent Process: Child has completed. Parent is now exiting.\n"'
+bash: syntax error near unexpected token `}'
+bash: return: can only `return' from a function or sourced script
+bash: syntax error near unexpected token `newline'
+bash: syntax error near unexpected token `('
+pid_t: command not found
+bash: //: Is a directory
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `{'
+bash: syntax error near unexpected token `"fork failed"'
+bash: syntax error near unexpected token `1'
+bash: syntax error near unexpected token `}'
+bash: syntax error near unexpected token `else'
+bash: syntax error near unexpected token `"Child Process: My PID is %d\n",'
+bash: syntax error near unexpected token `"Child Process: Simulating some work for 2 seconds...\n"'
+bash: syntax error near unexpected token `2'
+bash: syntax error near unexpected token `"Child Process: Work completed. Exiting.\n"'
+bash: syntax error near unexpected token `0'
+bash: syntax error near unexpected token `}'
+bash: syntax error near unexpected token `else'
+bash: syntax error near unexpected token `"Parent Process: My PID is %d\n",'
+bash: syntax error near unexpected token `"Parent Process: Waiting for child (PID: %d) to finish...\n",'
+bash: //: Is a directory
+bash: syntax error near unexpected token `NULL'
+bash: syntax error near unexpected token `"Parent Process: Child has completed. Parent is now exiting.\n"'
+bash: syntax error near unexpected token `}'
+bash: return: can only `return' from a function or sourced script
+bash: syntax error near unexpected token `newline'
+bash: syntax error near unexpected token `('
+pid_t: command not found
+bash: //: Is a directory
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `{'
+bash: syntax error near unexpected token `"fork failed"'
+bash: syntax error near unexpected token `1'
+bash: syntax error near unexpected token `}'
+bash: syntax error near unexpected token `else'
+bash: syntax error near unexpected token `"Child Process: My PID is %d\n",'
+bash: syntax error near unexpected token `"Child Process: Simulating some work for 2 seconds...\n"'
+bash: syntax error near unexpected token `2'
+bash: syntax error near unexpected token `"Child Process: Work completed. Exiting.\n"'
+bash: syntax error near unexpected token `0'
+bash: syntax error near unexpected token `}'
+bash: syntax error near unexpected token `else'
+bash: syntax error near unexpected token `"Parent Process: My PID is %d\n",'
+bash: syntax error near unexpected token `"Parent Process: Waiting for child (PID: %d) to finish...\n",'
+bash: //: Is a directory
+bash: syntax error near unexpected token `NULL'
+bash: syntax error near unexpected token `"Parent Process: Child has completed. Parent is now exiting.\n"'
+bash: syntax error near unexpected token `}'
+bash: return: can only `return' from a function or sourced script
+bash: syntax error near unexpected token `newline'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ #include <stdlib.h>
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ #include <unistd.h>
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ #include <sys/types.h>
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ #include <sys/wait.h>
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ 
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ int main() {
+[?2004lbash: syntax error near unexpected token `('
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     pid_t pid;
+[?2004lpid_t: command not found
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ 
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     // Create a new child process
+[?2004lbash: //: Is a directory
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     pid = fork();
+[?2004lbash: syntax error near unexpected token `('
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ 
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     if (pid < 0) {
+[?2004lbash: syntax error near unexpected token `{'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         perror("fork failed");
+[?2004lbash: syntax error near unexpected token `"fork failed"'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         exit(1);
+[?2004lbash: syntax error near unexpected token `1'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     } 
+[?2004lbash: syntax error near unexpected token `}'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     else if (pid == 0) {
+[?2004lbash: syntax error near unexpected token `else'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         printf("Child Process: My PID is %d\n", getpid());
+[?2004lbash: syntax error near unexpected token `"Child Process: My PID is %d\n",'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         printf("Child Process: Simulating some work for 2 seconds...\n");
+[?2004lbash: syntax error near unexpected token `"Child Process: Simulating some work for 2 seconds...\n"'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         sleep(2); 
+[?2004lbash: syntax error near unexpected token `2'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         printf("Child Process: Work completed. Exiting.\n");
+[?2004lbash: syntax error near unexpected token `"Child Process: Work completed. Exiting.\n"'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         exit(0);
+[?2004lbash: syntax error near unexpected token `0'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     } 
+[?2004lbash: syntax error near unexpected token `}'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     else {
+[?2004lbash: syntax error near unexpected token `else'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         printf("Parent Process: My PID is %d\n", getpid());
+[?2004lbash: syntax error near unexpected token `"Parent Process: My PID is %d\n",'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         printf("Parent Process: Waiting for child (PID: %d) to finish...\n", pid);
+[?2004lbash: syntax error near unexpected token `"Parent Process: Waiting for child (PID: %d) to finish...\n",'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         // Block the parent process until the child completes
+[?2004lbash: //: Is a directory
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         wait(NULL);
+[?2004lbash: syntax error near unexpected token `NULL'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         printf("Parent Process: Child has completed. Parent is now exiting.\n");
+[?2004lbash: syntax error near unexpected token `"Parent Process: Child has completed. Parent is now exiting.\n"'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     }
+[?2004lbash: syntax error near unexpected token `}'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ 
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     return 0;
+[?2004lbash: return: can only `return' from a function or sourced script
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ }~^C[?2004l[?2004h[?2004l
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ ^[[200~#include <stdio.h>
+[?2004lbash: syntax error near unexpected token `newline'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ #include <stdlib.h>
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ #include <unistd.h>
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ #include <sys/types.h>
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ 
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ int main() {
+[?2004lbash: syntax error near unexpected token `('
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     pid_t pid;
+[?2004lpid_t: command not found
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ 
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     // Create a new child process
+[?2004lbash: //: Is a directory
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     pid = fork();
+[?2004lbash: syntax error near unexpected token `('
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$ 
+[?2004l[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     if (pid < 0) {
+[?2004lbash: syntax error near unexpected token `{'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         perror("fork failed");
+[?2004lbash: syntax error near unexpected token `"fork failed"'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         exit(1);
+[?2004lbash: syntax error near unexpected token `1'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     } 
+[?2004lbash: syntax error near unexpected token `}'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     else if (pid == 0) {
+[?2004lbash: syntax error near unexpected token `else'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         // Child process finishes immediately
+[?2004lbash: //: Is a directory
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         printf("Child Process (PID: %d) is exiting immediately to become a zombie.\n", getpid());
+[?2004lbash: syntax error near unexpected token `"Child Process (PID: %d) is exiting immediately to become a zombie.\n",'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         exit(0);
+[?2004lbash: syntax error near unexpected token `0'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     } 
+[?2004lbash: syntax error near unexpected token `}'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$     else {
+[?2004lbash: syntax error near unexpected token `else'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         // Parent process sleeps, leaving the child as a zombie
+[?2004lbash: //: Is a directory
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         printf("Parent Process (PID: %d) is sleeping for 15 seconds.\n", getpid());
+[?2004lbash: syntax error near unexpected token `"Parent Process (PID: %d) is sleeping for 15 seconds.\n",'
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC: ~/Desktop/linux_lab/lab5[01;32mmahe@mahe-HP-Z2-Tower-G9-Workstation-Desktop-PC[00m:[01;34m~/Desktop/linux_lab/lab5[00m$         printf("--> QUICK: Run the 'ps' command in your terminal NOW to see the <defunct> process!\n");
+[?2004lbash: !\n: event not found
+[?2004h]0;mahe@mahe-HP-Z2-Tower-G9-Workstation

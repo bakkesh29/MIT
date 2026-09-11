@@ -1,0 +1,8 @@
+Welcome to the campus.
+I study at manipal every weekday.
+Manipal is a city in Karnataka.
+Our college is in manipal.
+This line has no matching word.
+Students from manipal university attend this lab.
+hello world
+Shell scripts and C programs

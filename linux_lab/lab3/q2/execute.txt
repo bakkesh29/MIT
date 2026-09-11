@@ -1,0 +1,16 @@
+# Commands to create files, compile and execute Q2
+
+cd q2
+
+# Create a file with more than 20 lines so paging can be demonstrated
+i=1
+while [ $i -le 45 ]
+do
+    echo "Line $i of the sample listing for the more utility."
+    i=`expr $i + 1`
+done > longfile.txt
+
+gcc sample.c -o sample
+
+# Pipe Enter keys so the program can pause every 20 lines
+printf '\n\n' | ./sample longfile.txt
