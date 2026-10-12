@@ -1,0 +1,113 @@
+================================================================================
+                    HPCS LAB 9 - CUDA SORTING ALGORITHMS
+================================================================================
+
+PROGRAM OVERVIEW
+--------------------------------------------------------------------------------
+1. sort_string_selection.cu
+   Sorts all characters of an input string in ascending order using selection sort on the GPU while preserving the null character.
+
+2. sort_each_word_selection.cu
+   Sorts the characters in each word in ascending order using selection sort on the GPU while keeping word order and preserving spaces.
+
+3. odd_even_transposition_sort.cu
+   Sorts N integers in ascending order using alternating even and odd phase transposition sort CUDA kernels.
+
+
+================================================================================
+FOLDER SETUP COMMANDS
+================================================================================
+mkdir -p HPCS_Labs/week9_cuda_sorting
+cd HPCS_Labs/week9_cuda_sorting
+
+
+================================================================================
+PROGRAM 1: sort_string_selection.cu
+================================================================================
+Description:
+Sorts all characters in an input string in ascending order using selection sort on the GPU.
+
+Commands to edit, compile, and run:
+nano sort_string_selection.cu
+nvcc sort_string_selection.cu -o sort_string_selection
+./sort_string_selection
+
+Sample Input:
+cuda
+
+Expected Output:
+=================================================================
+   CUDA Program 1: Sort String Using Selection Sort on GPU       
+=================================================================
+Enter a string: cuda
+
+Original String: "cuda" (Length: 4)
+Launching Selection Sort kernel on GPU...
+
+--- Result ---
+Sorted String  : "acdu"
+
+Sorting completed successfully!
+
+
+================================================================================
+PROGRAM 2: sort_each_word_selection.cu
+================================================================================
+Description:
+Sorts characters within each individual word in ascending order using selection sort on the GPU, preserving word order and spaces.
+
+Commands to edit, compile, and run:
+nano sort_each_word_selection.cu
+nvcc sort_each_word_selection.cu -o sort_each_word_selection
+./sort_each_word_selection
+
+Sample Input:
+cuda programming is fast
+
+Expected Output:
+=================================================================
+   CUDA Program 2: Sort Each Word Using Selection Sort on GPU    
+=================================================================
+Enter a line of text: cuda programming is fast
+
+Detected 4 word(s) in the line.
+Original Line: "cuda programming is fast"
+Launching 1 block(s) with 256 threads each (total words: 4)...
+
+--- Resulting Line with Each Word Sorted ---
+"acdu aggimmnoprr is afst"
+
+Sorting completed successfully!
+
+
+================================================================================
+PROGRAM 3: odd_even_transposition_sort.cu
+================================================================================
+Description:
+Sorts N integers in ascending order using alternating even and odd phase transposition sort kernels on the GPU.
+
+Commands to edit, compile, and run:
+nano odd_even_transposition_sort.cu
+nvcc odd_even_transposition_sort.cu -o odd_even_transposition_sort
+./odd_even_transposition_sort
+
+Sample Input:
+8
+64 34 25 12 22 11 90 8
+
+Expected Output:
+=================================================================
+   CUDA Program 3: Odd-Even Transposition Sort on GPU            
+=================================================================
+Enter number of elements (N): 8
+Enter 8 integers:
+64 34 25 12 22 11 90 8
+
+Original Array: 64 34 25 12 22 11 90 8 
+
+Sorting on GPU using alternating Even and Odd kernels (8 phases)...
+Grid configuration: 1 block(s), 256 thread(s) per block.
+
+Sorted Array  : 8 11 12 22 25 34 64 90 
+
+Sorting completed successfully!
