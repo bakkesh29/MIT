@@ -1,0 +1,150 @@
+================================================================================
+HPCS LAB - WEEK 2: MPI POINT-TO-POINT COMMUNICATION
+================================================================================
+
+EXPERIMENTS & SOURCE FILES:
+  1. 5-Process Parallel Calculator                 -> parallel_calculator.c
+  2. Synchronous Send & Case Toggle (MPI_Ssend)     -> synchronous_send_toggle.c
+  3. Parallel Array Sum Using Two Processes         -> array_sum_two_processes.c
+  4. Parallel Array Search Using Two Processes       -> parallel_search_two_processes.c
+  5. Prime Numbers (1 to 100) with Two Processes    -> primes_two_processes.c
+
+--------------------------------------------------------------------------------
+UBUNTU WORKSPACE COMMANDS
+--------------------------------------------------------------------------------
+mkdir -p HPCS_Labs/week2_mpi_point_to_point
+cd HPCS_Labs/week2_mpi_point_to_point
+
+--------------------------------------------------------------------------------
+PROGRAM 1: parallel_calculator.c
+--------------------------------------------------------------------------------
+Process Count:
+  Requires exactly 5 processes (-np 5)
+  (Rank 0 = Coordinator, Rank 1 = Add, Rank 2 = Sub, Rank 3 = Mul, Rank 4 = Div)
+
+Create/Open:
+  nano parallel_calculator.c
+
+Compile:
+  mpicc parallel_calculator.c -o parallel_calculator
+
+Run:
+  mpirun -np 5 ./parallel_calculator
+
+Sample Input:
+  Enter operand 1 (a): 20
+  Enter operand 2 (b): 4
+
+Expected Output:
+  --- Results Received by Coordinator (Rank 0) ---
+  Rank 1 (Addition)       : 20.00 + 4.00 = 24.00
+  Rank 2 (Subtraction)    : 20.00 - 4.00 = 16.00
+  Rank 3 (Multiplication) : 20.00 * 4.00 = 80.00
+  Rank 4 (Division)       : 20.00 / 4.00 = 5.00
+
+--------------------------------------------------------------------------------
+PROGRAM 2: synchronous_send_toggle.c
+--------------------------------------------------------------------------------
+Process Count:
+  Requires exactly 2 processes (-np 2)
+
+Create/Open:
+  nano synchronous_send_toggle.c
+
+Compile:
+  mpicc synchronous_send_toggle.c -o synchronous_send_toggle
+
+Run:
+  mpirun -np 2 ./synchronous_send_toggle
+
+Sample Input:
+  Enter a word/string: HelloCUDA
+
+Expected Output:
+  [Rank 0] Sending original word: "HelloCUDA" to Rank 1 via MPI_Ssend...
+  [Rank 1] Received: "HelloCUDA". Toggling letter cases...
+  [Rank 1] Sending toggled word back to Rank 0 via MPI_Ssend...
+  [Rank 0] Received toggled word from Rank 1: "hELLOcuda"
+
+--------------------------------------------------------------------------------
+PROGRAM 3: array_sum_two_processes.c
+--------------------------------------------------------------------------------
+Process Count:
+  Requires exactly 2 processes (-np 2)
+
+Create/Open:
+  nano array_sum_two_processes.c
+
+Compile:
+  mpicc array_sum_two_processes.c -o array_sum_two_processes
+
+Run:
+  mpirun -np 2 ./array_sum_two_processes
+
+Sample Input:
+  Enter number of elements in array (N): 6
+  Enter 6 integers:
+  10 20 30 40 50 60
+
+Expected Output:
+  [Rank 0] Computed local partial sum of 3 elements = 60
+  [Rank 0] Received partial sum from Rank 1 = 150
+
+  --- Result ---
+  Total Sum of Array = 210
+
+--------------------------------------------------------------------------------
+PROGRAM 4: parallel_search_two_processes.c
+--------------------------------------------------------------------------------
+Process Count:
+  Requires exactly 2 processes (-np 2)
+
+Create/Open:
+  nano parallel_search_two_processes.c
+
+Compile:
+  mpicc parallel_search_two_processes.c -o parallel_search_two_processes
+
+Run:
+  mpirun -np 2 ./parallel_search_two_processes
+
+Sample Input:
+  Enter number of elements in array (N): 6
+  Enter 6 integers:
+  12 25 37 49 55 68
+  Enter target value to search for: 49
+
+Expected Output:
+  --- Search Results ---
+  Found target 49 in Rank 1's partition at global index 3.
+
+--------------------------------------------------------------------------------
+PROGRAM 5: primes_two_processes.c
+--------------------------------------------------------------------------------
+Process Count:
+  Requires exactly 2 processes (-np 2)
+
+Create/Open:
+  nano primes_two_processes.c
+
+Compile:
+  mpicc primes_two_processes.c -o primes_two_processes
+
+Run:
+  mpirun -np 2 ./primes_two_processes
+
+Sample Input:
+  (No interactive input required)
+
+Expected Output:
+  [Rank 0] Discovered 15 primes in range [1 .. 50]:
+  2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 
+
+  [Rank 1] Discovered 10 primes in range [51 .. 100]:
+  53 59 61 67 71 73 79 83 89 97 
+
+  --- Complete List of Primes (1 to 100) ---
+  2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 
+
+  Total primes found = 25
+================================================================================

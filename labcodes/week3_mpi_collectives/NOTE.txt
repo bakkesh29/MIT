@@ -1,0 +1,134 @@
+================================================================================
+HPCS LAB - WEEK 3: MPI COLLECTIVES (BCAST, SCATTER, GATHER)
+================================================================================
+
+EXPERIMENTS & SOURCE FILES:
+  1. Factorial Distribution via MPI_Scatter        -> factorial_scatter.c
+  2. Group Averages via MPI_Scatter & MPI_Gather    -> average_scatter_gather.c
+  3. String Interleaving via Scatter & Gather       -> interleave_strings.c
+  4. Grouped Powers via MPI_Scatter & MPI_Gather    -> grouped_powers.c
+
+--------------------------------------------------------------------------------
+UBUNTU WORKSPACE COMMANDS
+--------------------------------------------------------------------------------
+mkdir -p HPCS_Labs/week3_mpi_collectives
+cd HPCS_Labs/week3_mpi_collectives
+
+--------------------------------------------------------------------------------
+PROGRAM 1: factorial_scatter.c
+--------------------------------------------------------------------------------
+Process Count:
+  Requires -np equal to the number of integers entered.
+  Example below uses: -np 4 (so enter exactly 4 numbers).
+
+Create/Open:
+  nano factorial_scatter.c
+
+Compile:
+  mpicc factorial_scatter.c -o factorial_scatter
+
+Run:
+  mpirun -np 4 ./factorial_scatter
+
+Sample Input:
+  Enter 4 integers (non-negative, <= 20 to prevent overflow):
+  2 3 4 5
+
+Expected Output:
+  [Process 0 of 4] Received integer: 2 -> Factorial: 2
+  [Process 1 of 4] Received integer: 3 -> Factorial: 6
+  [Process 2 of 4] Received integer: 4 -> Factorial: 24
+  [Process 3 of 4] Received integer: 5 -> Factorial: 120
+
+--------------------------------------------------------------------------------
+PROGRAM 2: average_scatter_gather.c
+--------------------------------------------------------------------------------
+Process Count:
+  Number of groups N must EQUAL -np.
+  Example below uses: -np 3 (with N = 3, M = 2).
+
+Create/Open:
+  nano average_scatter_gather.c
+
+Compile:
+  mpicc average_scatter_gather.c -o average_scatter_gather
+
+Run:
+  mpirun -np 3 ./average_scatter_gather
+
+Sample Input:
+  Enter number of groups (N, must equal process count 3): 3
+  Enter number of elements per group (M): 2
+  Enter 6 numbers (3 groups of 2):
+    Group 0 (2 numbers): 10 20
+    Group 1 (2 numbers): 30 40
+    Group 2 (2 numbers): 50 60
+
+Expected Output:
+  --- Gathered Group Averages at Rank 0 ---
+  Group 0 (Processed by Rank 0) Average = 15.00
+  Group 1 (Processed by Rank 1) Average = 35.00
+  Group 2 (Processed by Rank 2) Average = 55.00
+
+  Overall Average of all 6 numbers = 35.00
+
+--------------------------------------------------------------------------------
+PROGRAM 3: interleave_strings.c
+--------------------------------------------------------------------------------
+Process Count:
+  String length must be divisible by -np.
+  For strings of length 6 (e.g. "string" and "length"), use: -np 2 or -np 3.
+  Example below uses: -np 2.
+
+Create/Open:
+  nano interleave_strings.c
+
+Compile:
+  mpicc interleave_strings.c -o interleave_strings
+
+Run:
+  mpirun -np 2 ./interleave_strings
+
+Sample Input:
+  Enter first string (no spaces): string
+  Enter second string (equal length): length
+
+Expected Output:
+  --- Interleaving Result ---
+  String 1   : string
+  String 2   : length
+  Interleaved: slternigntgh
+
+--------------------------------------------------------------------------------
+PROGRAM 4: grouped_powers.c
+--------------------------------------------------------------------------------
+Process Count:
+  Number of groups N must EQUAL -np.
+  Example below uses: -np 3 (with N = 3, M = 2).
+
+Create/Open:
+  nano grouped_powers.c
+
+Compile:
+  mpicc grouped_powers.c -o grouped_powers
+
+Run:
+  mpirun -np 3 ./grouped_powers
+
+Sample Input:
+  Enter number of groups (N, must equal 3): 3
+  Enter number of elements per group (M): 2
+  Enter 6 integers (small positive integers recommended):
+    Group 0 (2 integers): 2 3
+    Group 1 (2 integers): 2 3
+    Group 2 (2 integers): 2 3
+
+Expected Output:
+  --- Computed Group Powers Gathered at Rank 0 ---
+  Group 0 (Processed by Rank 0, Power ^2):
+    2^2 = 4   3^2 = 9   
+  Group 1 (Processed by Rank 1, Power ^3):
+    2^3 = 8   3^3 = 27   
+  Group 2 (Processed by Rank 2, Power ^4):
+    2^4 = 16   3^4 = 81   
+================================================================================

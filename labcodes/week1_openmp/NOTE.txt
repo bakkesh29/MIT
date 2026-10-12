@@ -1,0 +1,179 @@
+================================================================================
+HPCS LAB - WEEK 1: OPENMP MULTITHREADED PROGRAMMING
+================================================================================
+
+EXPERIMENTS & SOURCE FILES:
+  1. Demonstration of Shared and Private Variables    -> shared_private.c
+  2. Array Addition Using Core-Based Threads          -> array_add_core_threads.c
+  3. Array Addition Using Custom Threads              -> array_add_custom_threads.c
+  4. Sum from 1 to N Using Parallel For Loop          -> sum_parallel_for.c
+  5. Sum from 1 to N Using Reduction Clause           -> sum_reduction.c
+  6. Parallelizing Nested Loops (2D Matrix Addition)   -> nested_loop.c
+
+--------------------------------------------------------------------------------
+UBUNTU WORKSPACE COMMANDS
+--------------------------------------------------------------------------------
+mkdir -p HPCS_Labs/week1_openmp
+cd HPCS_Labs/week1_openmp
+
+--------------------------------------------------------------------------------
+PROGRAM 1: shared_private.c
+--------------------------------------------------------------------------------
+Create/Open:
+  nano shared_private.c
+
+Compile:
+  gcc -fopenmp shared_private.c -o shared_private
+
+Run:
+  ./shared_private
+
+Sample Input:
+  (No input required; prints thread scoping demonstration)
+
+Expected Output:
+  Before Parallel Region:
+    shared_var  = 100
+    private_var = 0
+
+  [Thread 0 of 4] private_var = 10, shared_var = 100
+  [Thread 1 of 4] private_var = 20, shared_var = 105
+  [Thread 2 of 4] private_var = 30, shared_var = 110
+  [Thread 3 of 4] private_var = 40, shared_var = 115
+
+  After Parallel Region:
+    shared_var  = 120 (modified by all threads)
+    private_var = 0 (original master copy unchanged)
+
+--------------------------------------------------------------------------------
+PROGRAM 2: array_add_core_threads.c
+--------------------------------------------------------------------------------
+Create/Open:
+  nano array_add_core_threads.c
+
+Compile:
+  gcc -fopenmp array_add_core_threads.c -o array_add_core_threads
+
+Run:
+  ./array_add_core_threads
+
+Sample Input:
+  Enter number of elements (N): 4
+  Enter 4 elements for array A:
+  1 2 3 4
+  Enter 4 elements for array B:
+  10 20 30 40
+
+Expected Output:
+  Detected available CPU cores: 4
+  Computing array addition in parallel using 4 threads...
+  [Thread 0] C[0] = 1 + 10 = 11
+  [Thread 1] C[1] = 2 + 20 = 22
+  [Thread 2] C[2] = 3 + 30 = 33
+  [Thread 3] C[3] = 4 + 40 = 44
+
+  --- Resulting Array C (A + B) ---
+  11 22 33 44
+
+--------------------------------------------------------------------------------
+PROGRAM 3: array_add_custom_threads.c
+--------------------------------------------------------------------------------
+Create/Open:
+  nano array_add_custom_threads.c
+
+Compile:
+  gcc -fopenmp array_add_custom_threads.c -o array_add_custom_threads
+
+Run:
+  ./array_add_custom_threads
+
+Sample Input:
+  Enter number of elements (N): 4
+  Enter number of threads to use: 2
+  Enter 4 elements for array A:
+  5 10 15 20
+  Enter 4 elements for array B:
+  1 2 3 4
+
+Expected Output:
+  Executing parallel addition with 2 threads...
+  [Thread 0 of 2] C[0] = 5 + 1 = 6
+  [Thread 0 of 2] C[1] = 10 + 2 = 12
+  [Thread 1 of 2] C[2] = 15 + 3 = 18
+  [Thread 1 of 2] C[3] = 20 + 4 = 24
+
+  --- Resulting Array C (A + B) ---
+  6 12 18 24
+
+--------------------------------------------------------------------------------
+PROGRAM 4: sum_parallel_for.c
+--------------------------------------------------------------------------------
+Create/Open:
+  nano sum_parallel_for.c
+
+Compile:
+  gcc -fopenmp sum_parallel_for.c -o sum_parallel_for
+
+Run:
+  ./sum_parallel_for
+
+Sample Input:
+  Enter positive integer N: 10
+
+Expected Output:
+  [Thread 0] Computed partial sum = ...
+  --- Results ---
+  Calculated Total Sum : 55
+  Formula Check N(N+1)/2: 55
+  Verification: SUCCESS (Sum is correct!)
+
+--------------------------------------------------------------------------------
+PROGRAM 5: sum_reduction.c
+--------------------------------------------------------------------------------
+Create/Open:
+  nano sum_reduction.c
+
+Compile:
+  gcc -fopenmp sum_reduction.c -o sum_reduction
+
+Run:
+  ./sum_reduction
+
+Sample Input:
+  Enter positive integer N: 100
+
+Expected Output:
+  --- Results ---
+  Reduction Total Sum  : 5050
+  Formula Check N(N+1)/2: 5050
+  Verification: SUCCESS (Matches formula!)
+
+--------------------------------------------------------------------------------
+PROGRAM 6: nested_loop.c
+--------------------------------------------------------------------------------
+Create/Open:
+  nano nested_loop.c
+
+Compile:
+  gcc -fopenmp nested_loop.c -o nested_loop
+
+Run:
+  ./nested_loop
+
+Sample Input:
+  Enter number of rows (<= 100): 2
+  Enter number of columns (<= 100): 2
+  Enter 4 elements of Matrix A (2 x 2):
+  1 2
+  3 4
+  Enter 4 elements of Matrix B (2 x 2):
+  5 6
+  7 8
+
+Expected Output:
+  Parallelizing nested loops with OpenMP (collapse(2))...
+
+  --- Resulting Matrix C (A + B) ---
+      6     8 
+     10    12 
+================================================================================
